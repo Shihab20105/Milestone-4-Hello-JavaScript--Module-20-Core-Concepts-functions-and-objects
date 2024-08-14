@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Introduction</title>
+</head>
+<body>
+    <h1>20-1 Module Introduction and Concept Recap</h1>
+    <h2>/*                          variables in JavaScript (var VS let VS const) */</h2>
+
+
+    <p>Suppose, you loves reading a lot. 'Melvin Gray' is your favorite writer. You want to buy all of his books. 'X' publisher has published his 'Y' books.</p>
+    <h5>var title = 'Code Life';</h5>
+    <h5>let publisher = 'House of Books';</h5>
+    <h5>const author = 'Melvin Gray';</h5>
+
+    <h4>Slice Method:</h4>
+    <p>In JavaScript, the 'slice' method is used to extract a section of an array or string and return it as a new array or string, respectively, without modifying the original array or string. The 'slice' method can be particularly useful when you need to create a subarray or substring.</p>
+
+    <h4>Syntax for Arrays:</h4>
+    <h5>array.slice(start, end)</h5>
+
+    <h4>Syntax for Strings:</h4>
+    <h5>string.slice(start, end)</h5>
+
+    <h4>Parameters:</h4>
+    <p>start: The zero-based index at which to begin extraction. If omitted, it defaults to 0.</p>
+    <p>end: The zero-based index before which to end extraction. The 'slice' extracts up to, but not including, 'end'. If omitted, it extracts through the end of the array or string. If negative, it is treated as 'array.length + end'.</p>
+
+    <h4>Examples:</h4>
+
+    <h4>Array Example:</h4>
+    <h5>let fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];</h5>
+
+    <h5>// Extracting from index 1 to index 3 (not including index 3)</h5>
+    <h5>let slicedFruits = fruits.slice(1, 3);</h5>
+
+    <h5>console.log(slicedFruits); // Output: ['Banana', 'Cherry']</h5>
+    <h5>console.log(fruits); // Output: ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'] - Original array is unchanged</h5>
+
+    <h4>String Example:</h4>
+    <h5>let text = "Hello, world!";</h5>
+
+    <h5>// Extracting from index 7 to the end of the string</h5>
+    <h5>let slicedText = text.slice(7);</h5>
+
+    <h5>console.log(slicedText); // Output: 'world!'</h5>
+    <h5>console.log(text); // Output: 'Hello, world!' - Original string is unchanged</h5>
+
+    <h4>Key Points:</h4>
+    <p>Non-destructive: The 'slice' method does not modify the original array or string.</p>
+    <p>Returns a New Array/String: The extracted section is returned as a new array or string.</p>
+    <p>Flexible Start and End: You can use positive or negative indices. Negative indices count from the end of the array or string.</p>
+
+    <p>The 'slice' method is a versatile tool for working with parts of arrays and strings, making it easier to handle and manipulate data in JavaScript.</p>
+
+
+
+    /* ---------------------------------------------------------------------------------------------------------------------- */
+    <h2>/*                          Is loop running over and over again in JavaScript? */</h2> 
+
+    <p>In JavaScript, loops can run over and over again depending on how they are structured and the conditions set for their termination. Here are a few common types of loops and how they work:</p>
+
+    <h4>1. 'for' Loop</h4>
+    <p>A 'for' loop runs a specific number of times based on the initialization, condition, and increment expressions.</p>
+    <h5>for (let i = 0; i < 10; i++) {</h5>
+        <h5>&nbsp;&nbsp;console.log(i);</h5>
+    <h5>}</h5>
+    <p>In this example, the loop will run 10 times, logging the numbers 0 through 9.</p>
+
+    <h4>2. 'while' Loop</h4>
+    <p>A 'while' loop continues to run as long as its condition is 'true'.</p>
+    <h5>let i = 0;</h5>
+    <h5>while (i < 10) {</h5>
+        <h5>&nbsp;&nbsp;console.log(i);</h5>
+        <h5>&nbsp;&nbsp;i++;</h5>
+    <h5>}</h5>
+    <p>This loop also runs 10 times, logging the numbers 0 through 9.</p>
+
+    <h4>3. 'do...while' Loop</h4>
+    <p>A 'do...while' loop is similar to a 'while' loop, but it ensures the code block runs at least once before checking the condition.</p>
+    <h5>let i = 0;</h5>
+    <h5>do {</h5>
+        <h5>&nbsp;&nbsp;console.log(i);</h5>
+        <h5>&nbsp;&nbsp;i++;</h5>
+    <h5>} while (i < 10);</h5>
+    <h5>This loop runs 10 times as well, logging the numbers 0 through 9.</h5>
+ 
+    <h4>Infinite Loops</h4>
+    <p>An infinite loop occurs when the loop's terminating condition is never met. This can cause the loop to run indefinitely and may crash your program or browser.</p>
+
+    <h4>Example with 'while' Loop</h4>
+    <h5>while (true) {</h5>
+        <h5>&nbsp;&nbsp;console.log("This will run forever");</h5>
+    <h5>}</h5>
+
+    <h4>Example with 'for' Loop</h4>
+    <h5>for (;;) {</h5>
+        <h5>&nbsp;&nbsp;console.log("This will run forever");</h5>
+    <h5>}</h5>
+
+    <h4>Avoiding Infinite Loops</h4>
+    <p>To avoid infinite loops, ensure that the loop's terminating condition will eventually become false. Here are a few common pitfalls:</p>
+
+    <p>Incorrect condition: Ensure the condition will eventually be false.</p>
+    <p>Incorrect increment/decrement: Ensure the loop variable is being modified correctly within the loop body.</p>
+    <p>External dependency: Ensure that any external conditions or variables affecting the loop are controlled properly.</p>
+
+    <h4>Example: Avoiding an Infinite Loop</h4>
+    <h5>let i = 0;</h5>
+    <h5>while (i < 10) {</h5>
+        <h5>&nbsp;&nbsp;console.log(i);</h5>
+        <h5>&nbsp;&nbsp;i++;  // Ensure i is incremented</h5>
+    <h5>}</h5>
+    <p>In this example, the loop will terminate when 'i' reaches 10</p> 
+
+    <h4>Conclusion</h4>
+    <p>Loops can run indefinitely if their termination conditions are not met. It's important to write your loops carefully to ensure they execute as intended and terminate appropriately. If your loop is running over and over again and you didn't intend for it to do so, check the loop conditions and ensure that variables or conditions being checked are updated correctly within the loop body.</p>
+
+
+    /* ---------------------------------------------------------------------------------------------------------------------- */
+    <h2>/*                          Break and Continue */</h2> 
+
+    <p>In JavaScript, 'break' and 'continue' are control flow statements used within loops to manage the execution flow. Here’s how each of them works:</p>
+
+
+    <h4>'break' Statement:</h4>
+    <p>The 'break' statement is used to exit a loop or switch statement before it has completed its normal execution. When a 'break' statement is encountered, the loop or switch terminates immediately, and the program control resumes at the next statement following the loop or switch.</p>
+    <h4>Syntax:</h4>
+    <h5>break;</h5>
+    <h4>Example:</h4>
+    <h5>for (let i = 0; i < 10; i++) {</h5>
+      <h5>&nbsp;&nbsp;if (i === 5) {</h5>
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;break; // Exit the loop when i is 5</h5>
+      <h5>&nbsp;&nbsp;}</h5>
+      <h5>&nbsp;&nbsp;console.log(i);</h5>
+    <h5>}</h5>
+    <h5>// Output: 0 1 2 3 4</h5>
+
+
+    <h4>'continue' Statement:</h4>
+    <p>The 'continue' statement skips the rest of the current iteration of the loop and jumps to the next iteration. This is useful when you want to skip certain iterations based on a condition.</p>
+    <h4>Syntax:</h4>
+    <h5>continue;</h5>
+    <h4>Example:</h4>
+    <h5>for (let i = 0; i < 10; i++) {</h5>
+      <h5>&nbsp;&nbsp;if (i === 5) {</h5>
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;continue; // Skip the rest of the loop when i is 5 and continue with the next iteration</h5>
+      <h5>}&nbsp;&nbsp;</h5>
+      <h5>&nbsp;&nbsp;console.log(i);</h5>
+    <h5>}</h5>
+    <h5>// Output: 0 1 2 3 4 6 7 8 9</h5>
+
+
+    <h4>Key Differences:</h4>
+    <p>'break': Exits the loop entirely, stopping all further iterations.</p>
+    <p>'continue': Skips the current iteration and moves to the next iteration of the loop.</p>
+
+    <h4>Use Cases:</h4>
+    <p>break: Useful when you find the target condition and no longer need to continue looping.</p>
+    <p>continue: Useful when you need to skip certain iterations based on specific conditions but still want to continue with the loop.</p>
+
+    <p>Both statements help in managing the flow of loops more effectively, allowing for cleaner and more readable code.</p>
+</body>
+</html>
