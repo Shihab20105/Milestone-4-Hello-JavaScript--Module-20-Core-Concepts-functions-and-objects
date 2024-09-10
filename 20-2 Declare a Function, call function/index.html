@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declare a Function</title>
+</head>
+<body>
+    <h1>20-2 Declare a Function, call function, function vs loop</h1>
+
+    <h2>/*                          Function */</h2>
+
+    <p>* To write 'function' at first you have to write 'function' keyword. It's must.<p>
+    <p>* After 'function' keyword you got to write 'function' name.</p>
+    <p>* In 'function' names may have letters, digits, underscores and dollar sign. (Same roll as variable).</p>
+    <p>* After 'function' name you got to use parentheses ().</p>
+    <p>* After parentheses then you use curly brackets {} and inside curly brackets you have to write codes</p>
+
+
+    <h3>Difference between 'loop' and 'function' in JavaScrip:</h3>
+
+    <h4>Loop:</h4>
+    <p>Purpose: A loop is used to repeat a block of code multiple times, either for a fixed number of iterations or while a certain condition is met.</p>
+
+    <h4>Types of Loops:</h4>
+    <p>for: Repeats code a specific number of times.</p>
+    <p>while: Repeats code as long as a condition is true.</p>
+    <p>do...while: Similar to while, but the loop runs at least once.</p>
+    <p>for...in: Iterates over properties of an object.</p>
+    <p>for...of: Iterates over values of an iterable (like an array).</p>
+
+    <h4>Example of a loop:</h4>
+    <h5>for (let i = 0; i < 5; i++) {</h5>
+      <h5>&nbsp;&nbsp;console.log(i);  // Outputs 0, 1, 2, 3, 4</h5>
+    <h5>}</h5>
+
+    <h4>Function:</h>
+    <p>Purpose: A function is a reusable block of code that performs a specific task. Functions can take inputs (parameters) and return outputs (results). You call a function to execute its code.</p>
+    <p>Reusability: Once defined, a function can be called multiple times, with different inputs each time.</p>
+
+    <h4>Example of a function:</h4>
+    <h5>function add(a, b) {</h5>
+      <h5>&nbsp;&nbsp;return a + b;</h5>
+    <h5>}</h5>
+
+    <h5>console.log(add(2, 3));  // Outputs 5</h5>
+
+    <h4>Key Differences:</h4>
+    <h5>1. Purpose:</h5>
+    <p>A loop is used for repeating actions.</p>
+    <p>A function is used for organizing and reusing code.</p>
+
+    <h5>2. Control:</h5>
+    <p>A loop controls repetition by iterating over code.</p>
+    <p>A function is controlled by being called and can be invoked as many times as needed.</p>
+
+    <h5>3. When Used:</h5>
+    <p>Loop: Use when you need to repeat tasks.</p>
+    <p>Function: Use when you need to group related tasks that you want to reuse.</p>
+    
+
+
+    <h3>How to Declare a 'function'</h3>
+
+    <h5>function startFan(){</h5>
+        <h5>&nbsp;&nbsp;console.log('Stand up');</h5>
+        <h5>&nbsp;&nbsp;console.log('Walk towards the switch');</h5>
+        <h5>&nbsp;&nbsp;console.log('Press the switch');</h5>
+    <h5>}</h5>
+
+    <h4>Call the 'function'</h4>
+    <h5>startFan();</h5>
+    <h5>/* Output:</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch */</h5>
+
+    <h4>A function code is only written once. Then it can be used as many times as needed.</h4>
+
+    <h5>startFan();</h5>
+    <h5>startFan();</h5>
+    <h5>startFan();</h5>
+    <h5>/* Output:</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch */</h5>
+
+    <h5>startFan();</h5>
+    <h5>console.log('Waking up in the morning');</h5>
+    <h5>startFan();</h5>
+    <h5>console.log('Eating lunch');</h5>
+    <h5>console.log('Watching JavaScript tutorial');</h5>
+    <h5>startFan();</h5>
+
+    <h5>/* Output:</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch</h5>
+    <h5>Waking up in the morning</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch</h5>
+    <h5>Eating lunch</h5>
+    <h5>Watching JavaScript tutorial</h5>
+    <h5>Stand up</h5>
+    <h5>Walk towards the switch</h5>
+    <h5>Press the switch */</h5>
+
+    <h2>/* ------------------------------------------------------------------------------------------------------------- */</h2>
+
+    <h2>/*                          Parameter */</h2>
+
+    <h5>function bringSomosa(money){</h5>
+        <h5>&nbsp;&nbsp;console.log('Can you give me Somosa please');</h5>
+        <h5>&nbsp;&nbsp;console.log(money);</h5>
+    <h5>}</h5>
+
+    <h5>bringSomosa(100);</h5>
+    <h5>/* Output:</h5>
+    <h5>Can you give me Somosa please</h5>
+    <h5>100 */</h5>
+
+    <h5>bringSomosa(250);</h5>
+    <h5>/* Output:</h5>
+    <h5>Can you give me Somosa please</h5>
+    <h5>250 */</h5>
+</body>
+</html>
