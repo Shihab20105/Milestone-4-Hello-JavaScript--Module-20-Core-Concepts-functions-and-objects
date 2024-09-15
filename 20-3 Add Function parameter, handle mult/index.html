@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Function Parameter</title>
+</head>
+<body>
+    <h1>20-3 Add Function parameter, handle multiple parameters</h1>
+
+    <h2>/*                          Add Function parameter, handle multiple parameters */</h2>
+
+
+    <h3>Parameter:</h3> 
+    <p>A parameter in JavaScript is like a "placeholder" inside a function. When you create a function, you can use parameters to tell the function to expect some values later. These values are called arguments when you actually use the function.</p>
+
+    <h4>Think of it like this:</h4>
+    <p>1. When you write a function, you say, "Hey function, I'll give you some values when I need you!"</p>
+    <p>2. The names you give for those values inside the function are parameters.</p>
+    <p>3. When you run the function, you give it the actual values. These are called arguments.</p>
+
+    <h4>Here's a super simple example:</h4>
+    <h5>function sayHello(name) {</h5>
+        <h5>&nbsp;&nbsp;console.log("Hello, " + name);</h5>
+    <h5>}</h5>
+
+    <h4>name is a parameter (it's like a blank spot that will be filled later).</h4>
+
+    <h4>Now, when we use (or call) the function:</h4>
+    <h5>sayHello("Sam");  // Output: Hello, Sam</h5>
+
+    <h4>"Sam" is the argument (this fills the blank spot, or replaces the parameter).</h4>
+
+    <h4>So, in short:</h4>
+    <p>* Parameters are placeholders inside the function.</p>
+    <p>* Arguments are the actual values you pass when calling the function.</p>
+
+    <h2>/* ------------------------------------------------------------------------------------------------------------- */</h2>
+
+    <h5>function bringSomosa(money){</h5>
+        <h5>&nbsp;&nbsp;console.log(money);</h5>    
+        <h5>&nbsp;&nbsp;console.log('Here is your Somosa');</h5>    
+    <h5>}</h5>
+    <h5>bringSomosa(100);</h5>
+    <h5>/* Output:</h5>
+    <h5>100</h5> 
+    <h5>Here is your Somosa*/</h5>
+
+    <br>
+    <h5>function bringSomosa(money){</h5>
+        <h5>&nbsp;&nbsp;console.log('How much you gave: ',money);</h5>    
+        <h5>&nbsp;&nbsp;console.log('Here is your Somosa');</h5>    
+    <h5>}</h5>
+    <h5>bringSomosa(100);</h5>
+    <h5>/* Output:</h5>
+    <h5>How much you gave:  100</h5>
+    <h5>Here is your Somosa*/</h5>
+
+    <br>
+    <h5>function bringSomosa(money){</h5>
+        <h5>&nbsp;&nbsp;console.log('How much you gave: ',money);</h5>    
+        <h5>&nbsp;&nbsp;console.log('Here is your Somosa');</h5>    
+    <h5>}</h5>
+    <h5>bringSomosa(300);</h5>
+    <h5>/* Output:</h5>
+    <h5>How much you gave:  300</h5>
+    <h5>Here is your Somosa */</h5>
+
+    <br>
+    <h5>function add(num1, num2){</h5>
+        <h5>&nbsp;&nbsp;console.log('Going to add:', num1, num2);</h5>    
+    <h5>}</h5>
+    <h5>add();</h5>
+    <h5>/* Output:</h5>
+    <h5>Going to add: undefined undefined */</h5>
+
+    <br>
+    <h5>function add(num1, num2){</h5>
+        <h5>&nbsp;&nbsp;console.log('Going to add:', num1, num2);</h5>    
+    <h5>}</h5>
+    <h5>add(125);</h5>
+    <h5>/* Output:</h5>
+    <h5>Going to add: 125 undefined */</h5>
+
+    <br>
+    <h5>function add(num1, num2){</h5>
+    <h5>&nbsp;&nbsp;console.log('Going to add:', num1, num2);</h5>    
+    <h5>}</h5>
+    <h5>add(125, 96);</h5>
+    <h5>/* Output:</h5>
+    <h5>Going to add: 125 96 */</h5>
+
+    <br>
+    <h5>function sum(a, b, c, d, e){</h5>
+        <h5>&nbsp;&nbsp;console.log(a, b, c, d, e);</h5>    
+        <h5>&nbsp;&nbsp;var sum = a + b + c + d + e;</h5>    
+        <h5>&nbsp;&nbsp;console.log(sum);</h5>    
+    <h5>}</h5>
+    <h5>sum();</h5>
+    <h5>/* Output:</h5>
+    <h5>undefined undefined undefined undefined undefined</h5>
+    <h5>NaN */</h5>
+
+
+    <br>
+    <h5>function sum(a, b, c, d, e){</h5>
+        <h5>&nbsp;&nbsp;console.log(a, b, c, d, e);</h5>    
+        <h5>&nbsp;&nbsp;var sum = a + b + c + d + e;</h5>    
+        <h5>&nbsp;&nbsp;console.log(sum);</h5>    
+    <h5>}</h5>
+    <h5>sum(15, 98, 56);</h5>
+    <h5>/* Output:</h5>
+    <h5>15 98 56 undefined undefined</h5>
+    <h5>NaN */</h5>
+</body>
+</html>
