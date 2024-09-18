@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything you need a function</title>
+</head>
+<body>
+    <h1>20-4 Everything you need to know about return from a function</h1>
+    <h2>/*                          Everything you need to know about return from a function */</h2>
+
+    <p>* What is written after 'return' will be received as the 'value' of the return.</p>
+    
+    <h5></h5>function add(number1, number2){
+        <h5></h5>&nbsp;&nbsp;console.log(number1, number2);
+        <h5></h5>&nbsp;&nbsp;var sum = number1 + number2;
+        <h5></h5>&nbsp;&nbsp;console.log(sum);
+    <h5>}</h5>
+    <h5>add(45, 15);</h5>
+    <h5>/* Output:</h5>
+    <h5>45 15</h5>
+    <h5>60 */</h5>
+
+    
+    <br>
+    <h5>function add(number1, number2){</h5>
+        <h5>&nbsp;&nbsp;console.log(number1, number2);</h5>    
+        <h5>&nbsp;&nbsp;var sum = number1 + number2;</h5>    
+        <h5>&nbsp;&nbsp;return;</h5>    
+    <h5>}</h5>
+    <h5>var total = add(80, 20);</h5>
+    <h5>console.log('total', total);</h5>
+    <h5>/* Output:</h5>
+    <h5>80 20</h5>
+    <h5>total undefined*/</h5>
+
+
+    <br>
+    <h5>function add(number1, number2){</h5>
+        <h5>&nbsp;&nbsp;console.log(number1, number2);</h5>    
+        <h5>&nbsp;&nbsp;var sum = number1 + number2;</h5>    
+        <h5>&nbsp;&nbsp;return sum;</h5>    
+    <h5>}</h5>
+    <h5>var total = add(80, 20);</h5>
+    <h5>console.log('total', total);</h5>
+    <h5>/* Output:</h5>
+    <h5>80 20</h5>
+    <h5>total 100 */</h5>
+
+
+    <br>
+    <h5>function add(number1, number2){</h5>
+        <h5>&nbsp;&nbsp;console.log(number1, number2);</h5>    
+        <h5>&nbsp;&nbsp;var sum = number1 + number2;</h5>    
+        <h5>&nbsp;&nbsp;return sum;</h5>    
+        <h5>&nbsp;&nbsp;console.log('I need more code');</h5>    
+        <h5>&nbsp;&nbsp;return 15;</h5>    
+        <h5>&nbsp;&nbsp;return 'Hello John';</h5>    
+        <h5>&nbsp;&nbsp;return 'I am hungry';</h5>    
+    <h5>}</h5>
+    <h5>var total = add(80, 20);</h5>
+    <h5>console.log('total', total);</h5>
+
+
+    <br>
+    <h5>function bringSomosa(money){</h5>
+        <h5>&nbsp;&nbsp;var somosaPrice = 10;</h5>    
+        <h5>&nbsp;&nbsp;var quantity = money / somosaPrice;</h5>    
+        <h5>&nbsp;&nbsp;return quantity;</h5>    
+    <h5>}</h5>
+    <h5>var somosas = bringSomosa(200);</h5>
+    <h5>console.log('Eating somosas: ',somosas);</h5>
+    <h5>/* Output:</h5>
+    <h5>80 20</h5>
+    <h5>Eating somosas:  20 */</h5>
+
+
+    <br>
+    <h5>function bringSomosa(money){</h5>
+        <h5>&nbsp;&nbsp;var somosaPrice = 10;</h5>    
+        <h5>&nbsp;&nbsp;var quantity = money / somosaPrice;</h5>    
+        <h5>&nbsp;&nbsp;return quantity;</h5>    
+    <h5>}</h5>
+    <h5>var myTaka = 150;</h5>
+    <h5>var somosas = bringSomosa(myTaka);</h5>
+    <h5>console.log('Eating somosas: ',somosas);</h5>
+    <h5>/* Output:</h5>
+    <h5>80 20</h5>
+    <h5>Eating somosas:  15 */</h5>
+</body>
+</html>
