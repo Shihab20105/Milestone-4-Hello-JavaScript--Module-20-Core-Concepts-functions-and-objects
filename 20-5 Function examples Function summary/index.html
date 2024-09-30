@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function examples</title>
+</head>
+<body>
+    <h1>20-5 Function examples and Function summary</h1>
+    <h2>/*                          Function examples and Function summary */</h2>
+
+    <h5>function functionName (parameters){</h5>
+        <h5>&nbsp;&nbsp;function body</h5>     
+        <h5>&nbsp;&nbsp;return</h5>     
+    <h5>}</h5>
+    
+    <h5>var returnedValue = functionName (parameters value)</h5> 
+
+
+    <br>
+    <h5>function getAverage (assignment1, assignment2, assignment3){</h5>
+        <h5>&nbsp;&nbsp;const total = assignment1 + assignment2 + assignment3;</h5>    
+        <h5>&nbsp;&nbsp;const average = total / 3;</h5>    
+        <h5>&nbsp;&nbsp;return average;</h5>    
+    <h5>}</h5>
+
+    <br>
+    <h5>const assignment1Marks = 60;</h5>
+    <h5>const assignment2Marks = 58;</h5>
+    <h5>const assignment3Marks = 59;</h5>
+
+    <br>
+    <h5>var myAverage = getAverage(assignment1Marks, assignment2Marks, assignment3Marks);</h5>
+    <h5>console.log('My average so far: ', myAverage);</h5>
+    <h5>/* Output:</h5>
+    <h5>My average so far:  59 */</h5>
+
+
+    <br>
+    <h2>/* ------------------------------------------------------------------------------------------------------------- */</h2>
+
+    <h2>/*                          Function examples and Function summary add */</h2>
+
+
+    <h3>So What is function? </h3>
+    <p>* A procedure</p>
+    <p>* A set of smaller tasks that performs a bigger task when something calls it</p>
+    <p>* Maintains a relationship with input (the raw products which is given a function to perform task) and output (the ready product)</p>
+
+
+    <br>
+    <h3>What is function in JavaScript?</h3>
+    <p>* A block of code</p>
+    <p>* A set of statements (subprogram / block of code) that performs a task when it is called.</p>
+    <p>* Maintains a relationship with input and output.</p>
+
+    <br>
+    <h4>JavaScript square function:</h>
+    <p>A JavaScript square function is a simple function that takes a number as input and returns the square of that number. Here's how you can write a basic square function:</p>
+    <h5></h5>function square(number) {
+        <h5>&nbsp;&nbsp;return number * number;</h5>  
+    <h5>}</h5>
+    
+
+    <br>
+    <h5>console.log(square(4)); // Outputs 16</h5>
+    <h4>In this example:</h4>
+    <p>* 'square' is the function name.</p>
+    <p>* The function takes one argument, 'number'.</p>
+    <p>* It returns the square of the given number by multiplying the number by itself.</p>
+
+
+
+    <br>
+    <h3>argument vs parameter in JavaScript?</h3>
+    <p>In JavaScript (and in most programming languages), arguments and parameters are related but distinct concepts, especially in the context of functions:</p>
+
+    <h4>1. Parameter:</h4>
+    <p>* A parameter is a named variable that a function uses to accept input when the function is defined.</p>
+    <p>* These are placeholders that indicate what kind of input the function expects when it's called.</p>
+    <p>* Parameters exist in the function definition.</p>
+    <h4>Example:</h4>
+    <h5>function greet(name) {  // 'name' is the parameter</h5>
+        <h5>&nbsp;&nbsp;console.log("Hello, " + name);</h5>
+    <h5>}</h5>
+
+    <h4>2. Argument:</h4>
+    <p>* An argument is the actual value that you pass into the function when you call it.</p>
+    <p>* It is the real data that corresponds to the parameters defined in the function.</p>
+    <p>* Arguments exist in the function call.</p>
+    <h4>Example:</h4>
+    <h5>greet("Alice");  // 'Alice' is the argument</h5>
+
+    <h4>In Summary:</h4>
+    <p>* Parameters are variables defined in a function declaration to handle the data passed to it.</p>
+    <p>* Arguments are the actual values supplied when calling the function.</p>
+
+    <h4>Example Putting Both Together:</h4>
+    <h5>function add(a, b) {  // 'a' and 'b' are parameters</h5>
+        <h5>&nbsp;&nbsp;return a + b;</h5>    
+    <h5>}</h5>
+
+    <br>
+    <h5>let result = add(5, 10);  // 5 and 10 are arguments</h5>
+    <h5>console.log(result);  // Outputs: 15</h5>
+    <h4>In this case:</h4>
+    <p>* 'a' and 'b' are parameters.</p>
+    <p>* '5' and '10' are arguments passed when the function is invoked.</p>
+
+
+
+    <br>
+    <h3>function syntax in JavaScript?</h3>
+    <p>In JavaScript, there are several ways to define a function. Below are the most common function syntaxes:</p>
+    <h4>1. Function Declaration (Named Function):</h4>
+    <p>A function declaration defines a function with a name and can be used before its declaration due to hoisting.</p>
+    <h5>function functionName(parameters) {</h5>
+        <h5>&nbsp;&nbsp;// function body</h5>    
+        <h5>&nbsp;&nbsp;return value;</h5>    
+    <h5>}</h5>
+    <h4>Example:</h4>
+    <h5>function greet(name) {</h5>
+        <h5>&nbsp;&nbsp;return "Hello, " + name;</h5>    
+    <h5>}</h5>
+
+    <h5>console.log(greet("Alice"));  // Outputs: Hello, Alice</h5>
+
+    <h4>2. Function Expression:</h4>
+    <p>A function expression creates a function and assigns it to a variable. The function can be anonymous or named, but it cannot be used before it is defined.</p>
+    <h5>const functionName = function(parameters) {</h5>
+        <h5>&nbsp;&nbsp;// function body</h5>    
+        <h5>&nbsp;&nbsp;return value;</h5>    
+    <h5>};</h5>
+    <h4>Example:</h4>
+    <h5>const greet = function(name) {</h5>
+        <h5>&nbsp;&nbsp;return "Hello, " + name;</h5>    
+    <h5>};</h5>
+
+    <h5>console.log(greet("Bob"));  // Outputs: Hello, Bob</h5>
+
+    <h4>3. Arrow Function (ES6+):</h4>
+    <p>Arrow functions provide a shorter syntax and lexically bind the this value (i.e., they don't have their own this context). The 'function' keyword is replaced by '=>'.</p>
+        <h5>const functionName = (parameters) => {</h5>
+            <h5>&nbsp;&nbsp;// function body</h5>    
+            <h5>&nbsp;&nbsp;return value;</h5>    
+        <h5>};</h5>
+    <p>For single-line functions, you can omit the curly braces and the 'return' keyword:</p>
+    <h5>const functionName = (parameters) => value;</h5>
+    <h4>Example:</h4>
+    <h5>const greet = (name) => "Hello, " + name;</h5>
+
+    <h5>console.log(greet("Charlie"));  // Outputs: Hello, Charlie</h5>
+
+    <h4>4. Immediately Invoked Function Expression (IIFE):</h4>
+    <p>An IIFE is a function that is defined and immediately executed.</p>
+    <h5>(function() {</h5>
+        <h5>&nbsp;&nbsp;console.log("This function runs immediately!");</h5>    
+    <h5>})();</h5>
+    <h4>Example:</h4>
+    <h5>(function(name) {</h5>
+        <h5>&nbsp;&nbsp;console.log("Hello, " + name);</h5>    
+    <h5>})("Dana");  // Outputs: Hello, Dana</h5>
+
+    <h4>5. Function Constructor:</h4>
+    <p>Although not commonly used, functions can also be defined using the 'Function' constructor.</p>
+    <h5>const functionName = new Function('parameters', 'function body');</h5>
+    <h4>Example:</h4>
+    <h5>const add = new Function('a', 'b', 'return a + b;');</h5>
+    <h5>console.log(add(3, 4));  // Outputs: 7</h5>
+
+    <h3>Summary of Syntax:</h3>
+    <h4>1. Function Declaration:</h4>
+    <h5>function greet() { }</h5>
+    <h4>2. Function Expression:</h4>
+    <h5>const greet = function() { };</h5>
+    <h4>3. Arrow Function:</h4>
+    <h5>const greet = () => { };</h5>
+    <h4>4. IIFE:</h4>
+    <h5>(function() { })();</h5>
+
+
+    <br>
+    <h3>Function VS Loop?</h3>
+    <p>* Different syntax.</p>
+    <p>* Function can be executed as many times (1, 2, ....N times) you want whereas A loop is executed  a specific times when is performed (you can't perform other task in this time).</p>
+    <p>* You can give a specific name to a function whereas you can not give any name to a loop.</p>
+
+
+    <h4>Function parameter, function return?</h4>
+    <p>- No return and No parameter</p>
+    <p>- Has return and No parameter</p>
+    <p>- No return and Has parameter</p>
+    <p>- Has return and Has parameter</p>
+
+
+    <h4>Function parameter, function return:</h4>
+    <h5>- No return and No parameter</h5>
+    <h5>Imagine Situation-1,</h5>
+    <p>You have bought some fruits from market. As it is summer, you want to make fruit juice and save for future.</p>
+    <p>So, you are thinking ''I will make juice, pour it in a glass and save it.''</p>
+    <h5>function prepareJuice(){</h5>
+        <h5>&nbsp;&nbsp;//make juice using a fruit</h5>    
+        <h5>&nbsp;&nbsp;//save for future</h5>    
+    <h5>}</h5>
+
+    <h5>prepareJuice();</h5>
+
+
+
+    <h4>Function parameter, function return:</h4>
+    <h5>- Has return and No parameter</h5>
+    <h5>Imagine Situation-2,</h5> 
+    <p>You have bought some fruits from market, Your brother is willing to drink fruit juice and he is expecting you will make it for him.</p> 
+    <p>So, he is telling, ''Make juice pour it in a glass and serve me.''</p>   
+    <h5>function prepareJuice(){</h5>
+        <h5>&nbsp;&nbsp;//make juice using a fruit</h5>    
+        <h5>&nbsp;&nbsp;//pour it in a glass</h5>    
+    <h5>}</h5>
+    
+    <h5>var servedJuice = prepareJuice();</h5> 
+
+
+
+    <h4>Function parameter, function return:</h4>
+    <h5>- No return and Has parameter</h5>
+    <h5>Imagine Situation-3,</h5>
+    <p> It is summer and a fresh fruit juice refreshes the mind. Your elder brother has bought some fruits. He is willing to prepare fruit juice, save for the time of necessity and he is expecting you will make it for him.</p>
+    <p>So, he is giving you a fruit and telling, ''Take this fruit, make juice and save for future.''</p> 
+    <h5>function prepareJuice(fruit){</h5>
+        <h5>&nbsp;&nbsp;//make juice</h5>     
+        <h5>&nbsp;&nbsp;//save for future</h5>    
+    <h5>} </h5>
+
+    <h5>prepareJuice(fruit);</h5>
+
+
+
+
+
+
+
+    <h4>Function parameter, function return:</h4>
+    <h5>- Has return and Has parameter</h5>
+    <h5>Imagine Situation-4,</h5>
+    <p>Your elder brother has bought some fruits. He is willing to drink fruit juice and he is expecting you will make it for him.</p>
+    <p>So, he is giving you a fruit and telling, ''Take this fruit, make juice, pour it in a glass and serve me.''</p>   
+    <h5>function prepareJuice(fruit){</h5>
+        <h5>&nbsp;&nbsp;//make juice</h5>    
+        <h5>&nbsp;&nbsp;//pour it in a glass</h5>    
+        <h5>&nbsp;&nbsp;return glass;</h5>    
+    <h5>}</h5>
+    
+    <h5>var servedJuice = prepareJuice(fruit);</h5>
+
+
+
+
+
+    <h4>Multiple parameters in a function:</h4>
+    <h5>Imagine another situation,</h5>
+    <p>Your elder brother has bought apple and grapes. He is willing to drink a mixed fruit juice and he is expecting you will make it for him.</p>
+    <p>So, he is giving you  apple and grapes and telling, ''Take these fruits, make mixed juice, pour it in a glass and serve me.''</p>  
+    <h5>function prepareJuice(fruit1, fruit2){</h5>
+        <h5>&nbsp;&nbsp;//make juice of apple and grapes</h5>    
+        <h5>&nbsp;&nbsp;//pour it in a glass</h5>    
+        <h5>&nbsp;&nbsp;return glass;</h5>    
+    <h5>}</h5>
+    
+    <h5>var servedJuice = prepareJuice(apple, grapes);</h5>
+
+
+
+
+
+    <h5>function prepareJuice(fruit1, fruit2) {</h5>
+        <h5>&nbsp;&nbsp;// Combine the fruits into a juice</h5>    
+        <h5>&nbsp;&nbsp;var juice = fruit1 + " and " + fruit2 + " juice";</h5>    
+           
+        <h5>&nbsp;&nbsp;// Simulate pouring into a glass</h5>    
+        <h5>&nbsp;&nbsp;var glass = "Glass of " + juice;</h5>    
+           
+        <h5> &nbsp;&nbsp;// Return the glass</h5>   
+        <h5>&nbsp;&nbsp;return glass;</h5>    
+    <h5>}</h5>
+
+    <br>
+    <h5>// Define fruits</h5>
+    <h5>var apple = "Apple";</h5>
+    <h5>var grapes = "Grapes";</h5>
+
+    <br>
+    <h5>// Prepare and serve the juice</h5>
+    <h5>var servedJuice = prepareJuice(apple, grapes);</h5>
+    <h5>console.log(servedJuice); // Output: Glass of Apple and Grapes juice</h5>
+
+
+
+    <br>
+    <h5>function add(num1, num2){</h5>
+        <h5>&nbsp;&nbsp;const sum = num1 + num2;</h5>    
+        <h5>&nbsp;&nbsp;return sum;</h5>    
+    <h5>}</h5>
+
+    <br>
+    <h5>const result1 = add(12, 13);</h5>
+    <h5>const result2 = add(35, 7);</h5>
+    <h5>const finalResult = add(result1, result2);</h5>
+    <h5>console.log('My final result: ', finalResult);</h5>
+    <h5>/* Output:</h5>
+    <h5>My final result:  67 */</h5>
+</body>
+</html>
